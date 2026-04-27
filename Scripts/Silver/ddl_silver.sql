@@ -11,7 +11,8 @@ IF OBJECT_ID('silver.dim_airline', 'U') IS NOT NULL
     DROP TABLE silver.dim_airline
 CREATE TABLE silver.dim_airline (
     Reporting_airline NVARCHAR(50),
-    Airline_name NVARCHAR(50)
+    Airline_name NVARCHAR(50),
+    Dwh_create_date DATETIME2 DEFAULT GETDATE()
 )
 GO
 
@@ -24,7 +25,8 @@ CREATE TABLE silver.dim_airport (
     City NVARCHAR(50),
     State NVARCHAR(50),
     Latitude NVARCHAR(50),
-    Longitude NVARCHAR(50)
+    Longitude NVARCHAR(50),
+    Dwh_create_date DATETIME2 DEFAULT GETDATE()
 )
 GO
 
@@ -39,7 +41,8 @@ CREATE TABLE silver.dim_date (
     Day_of_week NVARCHAR(50),
     Day_name NVARCHAR(50), 
     Is_weekend NVARCHAR(50),
-    Quarter_name NVARCHAR(50)
+    Quarter_name NVARCHAR(50),
+    Dwh_create_date DATETIME2 DEFAULT GETDATE()
 )
 GO
 
@@ -49,8 +52,9 @@ GO
 CREATE TABLE silver.dim_route (
     Route_id NVARCHAR(50), 
     Origin NVARCHAR(50), 
-    Destination NVARCHAR(50)
-    )
+    Destination NVARCHAR(50),
+    Dwh_create_date DATETIME2 DEFAULT GETDATE()
+  )
 GO
 
 IF OBJECT_ID('silver.dim_weather', 'U') IS NOT NULL 
@@ -63,7 +67,8 @@ CREATE TABLE silver.dim_weather (
     Wind NVARCHAR(50), 
     Precipitation NVARCHAR(50), 
     Snow NVARCHAR(50), 
-    Avg_temp NVARCHAR(50)
+    Avg_temp NVARCHAR(50),
+    Dwh_create_date DATETIME2 DEFAULT GETDATE()
 )
 GO
 
@@ -82,6 +87,7 @@ CREATE TABLE silver.fact_flights (
   Arr_delay NVARCHAR(50), 
   Cancelled NVARCHAR(50), 
   Diverted NVARCHAR(50), 
-  Distance NVARCHAR(50)
+  Distance NVARCHAR(50),
+  Dwh_create_date DATETIME2 DEFAULT GETDATE()
 )
 GO
