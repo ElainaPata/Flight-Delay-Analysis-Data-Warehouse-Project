@@ -46,7 +46,6 @@ Design and implement a structured data warehouse to integrate aviation and weath
 
 #### Specifications 
 **Data Sources**: This project integrates multiple data sources to create a unified analytical dataset supporting flight performance and delay analysis.
-----------------------
 Flight Data:
 - Sourced from the Bureau of Transportation Statistics (BTS) Airline On-Time Performance dataset, providing detailed flight-level performance metrics.
 Weather Data:
