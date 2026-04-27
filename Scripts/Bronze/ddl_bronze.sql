@@ -19,7 +19,7 @@ IF OBJECT_ID('bronze.dim_airport', 'U') IS NOT NULL
 GO
 CREATE TABLE bronze.dim_airport (
     Airport_code NVARCHAR(50),
-    Airport_name NVARCHAR(50),
+    Airport_name NVARCHAR((255),
     City NVARCHAR(50),
     State NVARCHAR(50),
     Latitude NVARCHAR(50),
