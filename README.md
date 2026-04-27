@@ -83,9 +83,19 @@ Key Focus Areas:
 
 These insights enable stakeholders to evaluate airline performance, identify high-risk routes, and understand how weather conditions impact flight delays, supporting more informed operational decision-making.
 
-## 🛠️ Tech Stack
+### 🛠️ Tech Stack
 - SQL Server (Azure Data Studio)
 - Docker (containerized SQL environment)
 - Excel (data preparation)
 - CSV data sources (BTS, Kaggle)
 
+### 🌟 About Me 
+Hi, I’m Elaina Pata. I recently graduated with a Master of Science in Data Analytics and have a strong interest in data engineering and building scalable data systems.
+
+This project was created to demonstrate my ability to:
+- Design and implement a data warehouse from scratch
+- Integrate multiple real-world data sources
+- Apply dimensional modeling techniques
+- Build SQL-based data pipelines using a medallion architecture
+
+My goal is to showcase my ability to transform raw data into structured, transformed datasets that support meaningful business insights, and enable real-world analysis of operational performance.
