@@ -89,7 +89,7 @@ These insights enable stakeholders to evaluate airline performance, identify hig
 - Excel (data preparation)
 - CSV data sources (BTS, Kaggle)
 
-### 🌟 About Me 
+## 🌟 About Me 
 Hi, I’m Elaina Pata. I recently graduated with a Master of Science in Data Analytics and have a strong interest in data engineering and building scalable data systems.
 
 This project was created to demonstrate my ability to:
