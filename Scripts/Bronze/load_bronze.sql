@@ -24,7 +24,7 @@ From '/data/dim_airport.csv'
 With (
    FIRSTROW = 2,
    FIELDTERMINATOR = ',',
-   ROWTERMINATOR = '\n',
+   ROWTERMINATOR = '0x0a', --added due to an error related to the updated nvarchar length for Airport_name
    TABLOCK
 )
 GO
