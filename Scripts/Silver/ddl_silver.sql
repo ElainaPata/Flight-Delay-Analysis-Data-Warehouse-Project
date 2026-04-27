@@ -21,7 +21,7 @@ IF OBJECT_ID('silver.dim_airport', 'U') IS NOT NULL
 GO
 CREATE TABLE silver.dim_airport (
     Airport_code NVARCHAR(50),
-    Airport_name NVARCHAR((255),
+    Airport_name NVARCHAR(255),
     City NVARCHAR(50),
     State NVARCHAR(50),
     Latitude NVARCHAR(50),
