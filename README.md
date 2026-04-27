@@ -46,18 +46,12 @@ Design and implement a structured data warehouse to integrate aviation and weath
 
 #### Specifications 
 **Data Sources**: This project integrates multiple data sources to create a unified analytical dataset supporting flight performance and delay analysis.
-
-Flight Data: Sourced from the Bureau of Transportation Statistics (BTS) Airline On-Time Performance dataset, providing detailed flight-level performance metrics.
-
-Weather Data: Extracted from a Kaggle dataset containing integrated aviation and environmental attributes, and structured to align with flight data for multi-source analysis.
-
-Airport Data: Sourced from Kaggle and used to enrich flight records with geographic attributes (city, state, and coordinates) using IATA airport codes.
-
-Airline Data: Constructed by extracting unique carrier codes from the flight dataset and enriching them with descriptive airline names through manual mapping.
-
-Route Data: Engineered by combining origin and destination airport codes to create a unique route identifier, enabling route-level aggregation and analysis.
-
-Date Data: Manually generated to support time-based analysis, including derived attributes such as day of week, month, and weekend indicators.
+- Flight Data: Sourced from the Bureau of Transportation Statistics (BTS) Airline On-Time Performance dataset, providing detailed flight-level performance metrics.
+- Weather Data: Extracted from a Kaggle dataset containing integrated aviation and environmental attributes, and structured to align with flight data for multi-source analysis.
+- Airport Data: Sourced from Kaggle and used to enrich flight records with geographic attributes (city, state, and coordinates) using IATA airport codes.
+- Airline Data: Constructed by extracting unique carrier codes from the flight dataset and enriching them with descriptive airline names through manual mapping.
+- Route Data: Engineered by combining origin and destination airport codes to create a unique route identifier, enabling route-level aggregation and analysis.
+- Date Data: Manually generated to support time-based analysis, including derived attributes such as day of week, month, and weekend indicators.
 
 **Data Quality**: Ensure consistency and usability of data by standardizing column formats, aligning datasets across a common timeframe, and preparing data for transformation within the SQL pipeline.
 
