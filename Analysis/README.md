@@ -27,7 +27,7 @@ The objective is to identify meaningful patterns in delays and cancellations usi
 ![Airline Delay](analysis_results/airline_delay.png)
 
 **Insight:**
-JetBlue Airways and ExpressJet Airlines exhibit the highest average arrival delays, with delays exceeding 13 minutes on average. In contrast, Delta Air Lines and Southwest Airlines show negative or near-zero delays, indicating stronger on-time performance and operational efficiency.
+JetBlue Airways and ExpressJet Airlines exhibit the highest average arrival delays, with delays exceeding 13 minutes on average. In contrast, Delta Air Lines and Southwest Airlines show negative or almost zero delays, indicating stronger on-time performance and operational efficiency.
 
 ---
 
@@ -36,7 +36,7 @@ JetBlue Airways and ExpressJet Airlines exhibit the highest average arrival dela
 ![Route Delay](analysis_results/route_delay.png)
 
 **Insight:**
-The most delayed routes are concentrated among lower-frequency regional routes (e.g., SYR → EWR, ASE → SFO), with average delays exceeding 60 minutes. This suggests that smaller or less frequent routes may be more vulnerable to disruptions and scheduling inefficiencies.
+The most delayed routes are concentrated among lower frequency regional routes (e.g., SYR → EWR, ASE → SFO), with average delays exceeding 60 minutes. This suggests that smaller or less frequent routes may be more vulnerable to disruptions and scheduling inefficiencies.
 
 ---
 
@@ -54,7 +54,7 @@ Regional airports such as Jamestown Regional Airport and Ford Airport show the h
 ![Cancellation Rate](analysis_results/highest_cancellation_per_airport.png)
 
 **Insight:**
-Envoy Air and ExpressJet Airlines have the highest cancellation rates, exceeding 7%, significantly higher than major carriers like Delta and Hawaiian Airlines. This highlights potential reliability differences between regional and major carriers.
+Envoy Air and ExpressJet Airlines have the highest cancellation rates exceeding 7%, significantly higher than major carriers like Delta and Hawaiian Airlines. This highlights potential reliability differences between regional and major carriers.
 
 ---
 
@@ -63,7 +63,7 @@ Envoy Air and ExpressJet Airlines have the highest cancellation rates, exceeding
 ![Weather Impact](analysis_results/weather_impact_delay.png)
 
 **Insight:**
-Surprisingly, flights with no precipitation show slightly higher average delays compared to those with precipitation. This suggests that factors beyond weather—such as traffic volume or operational constraints—may have a stronger influence on delays in this dataset.
+Surprisingly, flights with no precipitation show slightly higher average delays compared to those with precipitation. This suggests that factors beyond weather such as traffic volume or operational constraints may have a stronger influence on delays in this dataset.
 
 ---
 
@@ -72,7 +72,7 @@ Surprisingly, flights with no precipitation show slightly higher average delays 
 ![Weekend vs Weekday](analysis_results/weekend_arrival_impact.png)
 
 **Insight:**
-Weekday flights exhibit higher average arrival delays compared to weekend flights, indicating that increased traffic volume and operational demand during weekdays may contribute more significantly to delays than weekend travel patterns.
+Weekday flights exhibit higher average arrival delays compared to weekend flights indicating that increased traffic volume and operational demand during weekdays may contribute more significantly to delays than weekend travel patterns.
 
 ---
 
@@ -82,7 +82,7 @@ Weekday flights exhibit higher average arrival delays compared to weekend flight
 
   * Bronze: Raw ingestion
   * Silver: Data cleaning and transformation
-  * Gold: Business-ready analytical views
+  * Gold: Business ready analytical views
 * SQL used for all transformations and analysis
 * Natural keys were retained for clarity and simplicity in joins
 * Data types standardized in Silver layer to support aggregation and analysis
