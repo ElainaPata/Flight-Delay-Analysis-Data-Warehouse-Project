@@ -115,9 +115,9 @@ Analysis/
 This analysis demonstrates the ability to:
 
 * Design and implement a full data warehouse using SQL
-* Transform raw data into structured, analysis-ready datasets
+* Transform raw data into structured, analysis ready datasets
 * Perform meaningful business analysis using SQL queries
-* Communicate insights clearly and effectively for decision-making
+* Communicate insights clearly and effectively for decision making
 
 ---
 
