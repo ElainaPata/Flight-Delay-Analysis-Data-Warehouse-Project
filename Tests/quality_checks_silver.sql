@@ -148,6 +148,18 @@ WHERE Airport_code IS NULL
    OR Snow IS NULL
    OR Avg_temp IS NULL
 
+--Checking for dupe rows 
+--Expecation: No results 
+SELECT
+    Airport_code,
+    Flight_date,
+    COUNT(*) AS record_count
+FROM bronze.dim_weather
+GROUP BY
+    Airport_code,
+    Flight_date
+HAVING COUNT(*) > 1
+
 --Checking for uniqueness of the two columns that join to the fact table 
 --Expectation: No dupes 
 SELECT Airport_code, Flight_date, COUNT(*) AS record_count
