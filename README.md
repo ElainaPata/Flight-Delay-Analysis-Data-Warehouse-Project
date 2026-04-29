@@ -8,19 +8,19 @@ Welcome to the Flight Delay Analysis Data Warehouse Project repository! This pro
 
 This project involves:
 
-1. **Data Architecture**
+1. **Data Architecture**:
    Designing a modern data warehouse using a medallion architecture (Bronze, Silver, Gold) to structure raw, cleaned, and business-ready aviation data.
 
-2. **Data Integration**
+2. **Data Integration**:
    Combining multiple real-world data sources, including flight performance, weather conditions, airport metadata, and airline reference data into a unified analytical model.
 
-3. **ETL Pipelines**
+3. **ETL Pipelines**:
    Extracting and loading structured CSV datasets into a SQL Server environment with transformations performed to standardize and prepare data for analysis.
 
-4. **Data Modeling**
+4. **Data Modeling**:
    Developing a dimensional model consisting of a central fact table (flight performance) and supporting dimension tables (airline, airport, route, date, and weather).
 
-5. **Analytics & Reporting**
+5. **Analytics & Reporting**:
    Enabling SQL-based analysis to uncover insights into flight delays, airline performance, route reliability, and the impact of weather on operations.
 
 ---
@@ -66,29 +66,29 @@ Design and implement a structured data warehouse to integrate aviation and weath
 **Data Sources**
 This project integrates multiple data sources to create a unified analytical dataset supporting flight performance and delay analysis.
 
-* **Flight Data:** Bureau of Transportation Statistics (BTS) Airline On-Time Performance dataset
-* **Weather Data:** Kaggle dataset with aviation and environmental attributes
-* **Airport Data:** Kaggle dataset enriched with geographic attributes
-* **Airline Data:** Derived and manually mapped from flight dataset
-* **Route Data:** Engineered from origin and destination airport codes
-* **Date Data:** Manually generated with time-based attributes
+* **Flight Data:**: Bureau of Transportation Statistics (BTS) Airline On-Time Performance dataset
+* **Weather Data:**: Kaggle dataset with aviation and environmental attributes
+* **Airport Data:**: Kaggle dataset enriched with geographic attributes
+* **Airline Data:**: Derived and manually mapped from flight dataset
+* **Route Data:**: Engineered from origin and destination airport codes
+* **Date Data:**: Manually generated with time-based attributes
 
-**Data Quality**
+**Data Quality**:
 Standardized formats, aligned datasets across a consistent timeframe, and ensured usability for transformation and analysis.
 
-**Data Integration**
+**Data Integration**:
 Combined datasets using shared keys such as airport codes, dates, and route identifiers.
 
-**Data Modeling**
+**Data Modeling**:
 Designed a star schema with a central fact table and supporting dimension tables.
 
-**Architecture**
+**Architecture**:
 
 * Bronze → Raw ingestion
 * Silver → Cleaned and standardized
 * Gold → Business-ready analytical views
 
-**Scope**
+**Scope**:
 Dataset limited to January 2019 to ensure consistency and avoid external anomalies.
 
 ---
@@ -99,7 +99,7 @@ Dataset limited to January 2019 to ensure consistency and avoid external anomali
 
 Develop SQL-based analysis to generate insights into flight performance and operational efficiency for January 2019.
 
-### Key Focus Areas
+### Key Focus Areas:
 
 * Airline performance and delay patterns
 * Route-level reliability
@@ -150,13 +150,13 @@ The following analysis was conducted using the Gold layer of the data warehouse.
 * SQL Server (Azure Data Studio)
 * Docker (containerized SQL environment)
 * Excel (data preparation)
-* CSV data sources (BTS, Kaggle)
+* CSV data sources (BTS, Kaggle, and custom engineered datasets through data enrichment)
 
 ---
 
 ## 🌟 About Me
 
-Hi, I’m Elaina Pata. I recently graduated with a Master of Science in Data Analytics and have a strong interest in data engineering and building scalable data systems.
+Hi, I’m Elaina Pata. I recently graduated with a Master of Science in Data Analytics and have a strong interest in data engineering, data analytics, and building scalable data systems.
 
 This project was created to demonstrate my ability to:
 
