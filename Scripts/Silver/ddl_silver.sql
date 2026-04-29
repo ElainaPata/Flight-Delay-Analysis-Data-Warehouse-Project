@@ -62,12 +62,12 @@ IF OBJECT_ID('silver.dim_weather', 'U') IS NOT NULL
 GO
 CREATE TABLE silver.dim_weather (
     Airport_code NVARCHAR(50), 
-    Airport_name NVARCHAR(50), 
+    Airport_name NVARCHAR(255), 
     Flight_date NVARCHAR(50), 
-    Wind NVARCHAR(50), 
-    Precipitation NVARCHAR(50), 
-    Snow NVARCHAR(50), 
-    Avg_temp NVARCHAR(50),
+    Wind FLOAT,
+    Precipitation FLOAT,
+    Snow FLOAT,
+    Avg_temp FLOAT,
     Dwh_create_date DATETIME2 DEFAULT GETDATE()
 )
 GO
@@ -81,13 +81,13 @@ CREATE TABLE silver.fact_flights (
   Origin NVARCHAR(50), 
   Destination NVARCHAR(50), 
   Route_id NVARCHAR(50), 
-  Dep_delay NVARCHAR(50), 
-  Taxi_out NVARCHAR(50), 
-  Taxi_in NVARCHAR(50),
-  Arr_delay NVARCHAR(50), 
-  Cancelled NVARCHAR(50), 
-  Diverted NVARCHAR(50), 
-  Distance NVARCHAR(50),
+  Dep_delay FLOAT,
+  Taxi_out FLOAT,
+  Taxi_in FLOAT,
+  Arr_delay FLOAT,
+  Cancelled INT,
+  Diverted INT,
+  Distance FLOAT,
   Dwh_create_date DATETIME2 DEFAULT GETDATE()
 )
 GO
