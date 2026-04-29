@@ -86,6 +86,7 @@ GO
 
 TRUNCATE TABLE silver.dim_weather;
 GO
+
 INSERT INTO silver.dim_weather (
     Airport_code,
     Airport_name,
@@ -96,15 +97,31 @@ INSERT INTO silver.dim_weather (
     Avg_temp
 )
 SELECT
-    UPPER(TRIM(Airport_code)) AS Airport_code,
-    TRIM(Airport_name) AS Airport_name,
-    TRY_CONVERT(DATE, Flight_date) AS Flight_date,
-    TRY_CONVERT(FLOAT, Wind) AS Wind,
-    TRY_CONVERT(FLOAT, Precipitation) AS Precipitation,
-    TRY_CONVERT(FLOAT, Snow) AS Snow,
-    TRY_CONVERT(FLOAT, Avg_temp) AS Avg_temp
-FROM bronze.dim_weather
+    Airport_code,
+    Airport_name,
+    Flight_date,
+    Wind,
+    Precipitation,
+    Snow,
+    Avg_temp
+FROM (
+    SELECT
+        UPPER(TRIM(Airport_code)) AS Airport_code,
+        TRIM(Airport_name) AS Airport_name,
+        TRY_CONVERT(DATE, Flight_date) AS Flight_date,
+        TRY_CONVERT(FLOAT, Wind) AS Wind,
+        TRY_CONVERT(FLOAT, Precipitation) AS Precipitation,
+        TRY_CONVERT(FLOAT, Snow) AS Snow,
+        TRY_CONVERT(FLOAT, Avg_temp) AS Avg_temp,
+        ROW_NUMBER() OVER (
+            PARTITION BY UPPER(TRIM(Airport_code)), TRY_CONVERT(DATE, Flight_date)
+            ORDER BY TRIM(Airport_name)
+        ) AS rn
+    FROM bronze.dim_weather
+) t
+WHERE rn = 1
 GO
+	
 
 TRUNCATE TABLE silver.fact_flights;
 GO
