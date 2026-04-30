@@ -1,6 +1,8 @@
-# Flight Delay Analysis Data Warehouse Project
+# U.S. Aviation Performance Data Warehouse Project
 
-Welcome to the Flight Delay Analysis Data Warehouse Project repository! This project demonstrates the design and implementation of a modern data warehouse using aviation and weather data to analyze flight delays and support real-world operational insights. It highlights best practices in data engineering, dimensional modeling, and SQL-based analytics.
+This project demonstrates the design and implementation of a modern data warehouse built using U.S. aviation performance data from January 2019, sourced from the Bureau of Transportation Statistics (BTS) and supplemented with weather data. The goal of this project is to analyze airline performance, route reliability, delays, and cancellations to generate operational insights.
+
+The data warehouse follows a medallion architecture (Bronze → Silver → Gold) and incorporates dimensional modeling techniques to transform raw data into structured, analysis-ready datasets. This project highlights best practices in data engineering, including data ingestion, transformation, data quality handling, and SQL-based analytics.
 
 ---
 
